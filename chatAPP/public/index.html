@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PanelaCall</title>
+    <link rel="shortcut icon" href="./assets/panela-de-pressao.png" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="bodyDiv" class="container-fluid d-flex flex-column justify-content-center p-2">
+        <div class="container-fluid" id="userForm">
+            <form action="" name="userForm" id="userForm" >
+                <div class="form-floating gap-2">
+                    <input type="text" class="form-control form-control-sm" id="user" placeholder="name@example.com">
+                    <label for="user">Usuário</label>
+                    <button type="submit" class="btn btn-primary btn-sm">Logar</button>
+                </div>           
+            </form>
+          </div>
+      <main class="container-fluid mb-5 mt-3 w-75 position-relative">      
+        <nav class="navbar justify-content-center">
+          <div class="container-fluid justify-content-center">
+            PanelaCall
+            <a href="#" class="navbar-brand ms-1">
+              <img
+                src="./assets/panela-de-pressao.png"
+                alt="Panela"
+                width="32"
+                height="30"
+            /></a>
+          </div>
+        </nav>
+        
+        <div
+          class="container-fluid d-flex flex-column align-items-center position-relative w-100 h-75"
+          id="chatDiv"
+        ></div>
+        <div class="container-fluid mb-1 position-absolute bottom-0 start-50 translate-middle-x ">
+          <form action="" name="messageForm" id="messageForm" >
+            <div class="container-fluid d-flex gap-2 justify-content-center">
+              <input type="text" name="msg" id="msg" class="form-control form-control-sm w-auto" />
+              <button type="submit" class="btn btn-primary btn-sm">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="./chat.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

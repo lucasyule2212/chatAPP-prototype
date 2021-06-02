@@ -1,0 +1,43 @@
+/*PARA MOBILE*/
+#bodyDiv {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../assets/adrian-infernus-GLf7bAwCdYg-unsplash.jpg");
+  background-size: auto;
+  background-size: cover;
+}
+#bodyDiv nav {
+  font-family: "Fredoka One", cursive !important;
+  color: #FF6B6B;
+  font-size: 4vh;
+}
+#bodyDiv main {
+  background-color: #f7fff781;
+  height: 70vh;
+}
+#bodyDiv main #chatDiv {
+  margin-bottom: 1vh;
+}
+#bodyDiv #userForm {
+  max-width: 350px;
+  width: 250px;
+}
+#bodyDiv #userForm div {
+  display: flex;
+}
+#bodyDiv #userForm input {
+  width: 150px;
+  height: 30px;
+}
+#bodyDiv #userForm label {
+  font-size: 0.9rem;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (min-width: 600px) {
+  /*PARA DESKTOP*/
+}
+
+/*# sourceMappingURL=style.css.map */

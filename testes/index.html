@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chatAPP-PROTO</title>
+  </head>
+  <body>
+
+
+
+
+
+
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      const socket = io("http://localhost:3000/"); //passando para o socket onde ele deve se ligar com o back(mesmo caminho/url)
+      socket.on('hello',(data)=>{ //o método socket.'on', funciona como listener, que executa o bloco de código(funçao), sempre que ocorrer o evento
+            console.log(data.msg); //no exemplo o 'on' está esperando uma mensagem vindo do backend com o identificador 'hello'
+      })                            //no obj data está o objeto msg que foi passado no socket do backend.
+
+      socket.emit('hello_client_response',{msg:'Mensagem do front para o back!'})//o método socket.'emit', manda uma mensagem diretamente para o backend através do socket
+                                                                                //primeiro recebe o parametro "identificador" da mensagem, depois o conteúdo da mensagem(no exemplo um obj com msg)
+    </script>                                                                        
+  </body>
+</html>
