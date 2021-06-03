@@ -12,7 +12,10 @@ const server = app.listen(process.env.PORT, () => {
 });
 
 const io = socketIO(server); //conectando o socket ao nosso server
+
+
 const messages = []; // array que armazena mensagens
+
 io.on("connection", (socket) => {
   //colocando o 'io' para sempre a uma nova conexao checar alguns parametros:
   socket.emit('update_messages',messages);//atualizando msgs para os novos users conectados

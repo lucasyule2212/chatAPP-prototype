@@ -20,19 +20,40 @@
     />
   </head>
   <body>
-    <div id="bodyDiv" class="container-fluid d-flex flex-column justify-content-center p-2">
-        <div class="container-fluid" id="userForm">
-            <form action="" name="userForm" id="userForm" >
-                <div class="form-floating gap-2">
-                    <input type="text" class="form-control form-control-sm" id="user" placeholder="name@example.com">
-                    <label for="user">Usuário</label>
-                    <button type="submit" class="btn btn-primary btn-sm">Logar</button>
-                </div>           
-            </form>
+    <div
+      id="bodyDiv"
+      class="container-fluid d-flex shadow-lg flex-column justify-content-center p-2"
+    >
+      <div class="container-fluid " id="userForm">
+        <form action="" name="userForm" id="userForm">
+          <div class="form-floating gap-2 bg-light p-1 rounded shadow" id="divInsideForm">
+            <input
+              type="text"
+              class="form-control form-control-sm"
+              id="user"
+              placeholder="name@example.com"
+            />
+            <label for="user">Usuário</label>
+            <div>
+              <label for="userColor" class="input-group-text">Cor de Usuário:</label>
+              <input  type="color" id="userColor" class="align-self-center" />
+            </div>
+            <div>
+              <label for="userTextColor" class="input-group-text">Cor do Texto:</label>
+              <input
+                type="color"
+                id="userTextColor"
+                class="align-self-center"
+              />
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-sm">Logar</button>
           </div>
-      <main class="container-fluid mb-5 mt-3 w-75 position-relative">      
+        </form>
+      </div>
+      <main class="container-fluid mb-5 mt-3 w-75 shadow position-relative">
         <nav class="navbar justify-content-center">
-          <div class="container-fluid justify-content-center">
+          <div class="container-fluid  justify-content-center">
             PanelaCall
             <a href="#" class="navbar-brand ms-1">
               <img
@@ -43,16 +64,43 @@
             /></a>
           </div>
         </nav>
-        
+
         <div
-          class="container-fluid d-flex flex-column align-items-center position-relative w-100 h-75"
+          class="
+            container-fluid
+            d-flex
+            flex-column
+            align-items-center
+            position-relative
+            w-100
+            h-75
+            overflow-auto
+            
+          "
           id="chatDiv"
-        ></div>
-        <div class="container-fluid mb-1 position-absolute bottom-0 start-50 translate-middle-x ">
-          <form action="" name="messageForm" id="messageForm" >
+        >
+        </div>
+        <div
+          class="
+            container-fluid
+            mb-1
+            position-absolute
+            bottom-0
+            start-50
+            translate-middle-x
+          "
+        >
+          <form action="" name="messageForm" id="messageForm">
             <div class="container-fluid d-flex gap-2 justify-content-center">
-              <input type="text" name="msg" id="msg" class="form-control form-control-sm w-auto" />
-              <button type="submit" class="btn btn-primary btn-sm">Enviar</button>
+              <input
+                type="text"
+                name="msg"
+                id="msg"
+                class="form-control form-control-sm w-auto"
+              />
+              <button type="submit" class="btn btn-primary btn-sm">
+                Enviar
+              </button>
             </div>
           </form>
         </div>

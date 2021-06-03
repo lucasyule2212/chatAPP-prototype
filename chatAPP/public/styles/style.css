@@ -21,6 +21,8 @@
 #bodyDiv #userForm {
   max-width: 350px;
   width: 250px;
+  display: flex;
+  justify-content: center;
 }
 #bodyDiv #userForm div {
   display: flex;
@@ -35,9 +37,43 @@
   display: flex;
   align-items: center;
 }
+#bodyDiv #userForm #userColor, #bodyDiv #userForm #userTextColor {
+  border: none;
+  min-width: 20px;
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+#bodyDiv #msg_container {
+  margin-top: auto;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  background-color: #82ccdd;
+  padding: 7px;
+  position: relative;
+}
+#bodyDiv ul {
+  padding: 0;
+  justify-content: center;
+  list-style-type: none;
+}
+#bodyDiv #divInsideForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 @media only screen and (min-width: 600px) {
   /*PARA DESKTOP*/
+  #userForm {
+    justify-content: start;
+  }
+  #userForm #divInsideForm {
+    flex-direction: row;
+  }
+  #userForm #divInsideForm label {
+    width: max-content;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
